@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+    <line>
+      <![CDATA[waiting for page to load...]]>
+    </line>
+    <line>
+      <![CDATA[Page is loaded]]>
+    </line>
+    <line>
+      <![CDATA[entering userName to the userName textbox]]>
+    </line>
+    <line>
+      <![CDATA[entering password to the password textbox]]>
+    </line>
+    <line>
+      <![CDATA[clicking on login button]]>
+    </line>
+    <line>
+      <![CDATA[waiting for page to load...]]>
+    </line>
+    <line>
+      <![CDATA[Page is loaded]]>
+    </line>
+    <line>
+      <![CDATA[entering userName to the userName textbox]]>
+    </line>
+    <line>
+      <![CDATA[entering password to the password textbox]]>
+    </line>
+    <line>
+      <![CDATA[clicking on login button]]>
+    </line>
+    <line>
+      <![CDATA[entering First name to the FirstName textbox]]>
+    </line>
+    <line>
+      <![CDATA[Update LastName to the Lastname textbox]]>
+    </line>
+    <line>
+      <![CDATA[Update postCode to the Postcode textbox]]>
+    </line>
+    <line>
+      <![CDATA[Update postCode to the Postcode textbox]]>
+    </line>
+  </reporter-output>
+  <suite name="Command line suite" duration-ms="29285" started-at="2017-11-23T07:31:30Z" finished-at="2017-11-23T07:31:59Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="29285" started-at="2017-11-23T07:31:30Z" finished-at="2017-11-23T07:31:59Z">
+      <class name="testScripts.login.TestLogin1Test">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testScripts.login.TestLogin1Test@1e67b872]" name="setUp" is-config="true" duration-ms="8145" started-at="2017-11-23T13:01:30Z" finished-at="2017-11-23T13:01:38Z">
+          <reporter-output>
+            <line>
+              <![CDATA[waiting for page to load...]]>
+            </line>
+            <line>
+              <![CDATA[Page is loaded]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testLogin()[pri:0, instance:testScripts.login.TestLogin1Test@1e67b872]" name="testLogin" duration-ms="2605" started-at="2017-11-23T13:01:38Z" finished-at="2017-11-23T13:01:41Z">
+          <reporter-output>
+            <line>
+              <![CDATA[entering userName to the userName textbox]]>
+            </line>
+            <line>
+              <![CDATA[entering password to the password textbox]]>
+            </line>
+            <line>
+              <![CDATA[clicking on login button]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testScripts.login.TestLogin1Test@1e67b872]" name="tearDown" is-config="true" duration-ms="680" started-at="2017-11-23T13:01:41Z" finished-at="2017-11-23T13:01:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testLogin status=SUCCESS method=TestLogin1Test.testLogin()[pri:0, instance:testScripts.login.TestLogin1Test@1e67b872] output=entering userName to the userName textbox]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testScripts.login.TestLogin1Test -->
+      <class name="testScripts.login.UpdateProfile1Test">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testScripts.login.UpdateProfile1Test@60addb54]" name="setUp" is-config="true" duration-ms="10359" started-at="2017-11-23T13:01:41Z" finished-at="2017-11-23T13:01:52Z">
+          <reporter-output>
+            <line>
+              <![CDATA[waiting for page to load...]]>
+            </line>
+            <line>
+              <![CDATA[Page is loaded]]>
+            </line>
+            <line>
+              <![CDATA[entering userName to the userName textbox]]>
+            </line>
+            <line>
+              <![CDATA[entering password to the password textbox]]>
+            </line>
+            <line>
+              <![CDATA[clicking on login button]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="updateprofile()[pri:0, instance:testScripts.login.UpdateProfile1Test@60addb54]" name="updateprofile" duration-ms="6819" started-at="2017-11-23T13:01:52Z" finished-at="2017-11-23T13:01:58Z">
+          <reporter-output>
+            <line>
+              <![CDATA[entering First name to the FirstName textbox]]>
+            </line>
+            <line>
+              <![CDATA[Update LastName to the Lastname textbox]]>
+            </line>
+            <line>
+              <![CDATA[Update postCode to the Postcode textbox]]>
+            </line>
+            <line>
+              <![CDATA[Update postCode to the Postcode textbox]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- updateprofile -->
+        <test-method status="PASS" signature="testDown()[pri:0, instance:testScripts.login.UpdateProfile1Test@60addb54]" name="testDown" is-config="true" duration-ms="644" started-at="2017-11-23T13:01:58Z" finished-at="2017-11-23T13:01:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDown -->
+      </class> <!-- testScripts.login.UpdateProfile1Test -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>
