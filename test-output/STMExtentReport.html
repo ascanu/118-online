@@ -24,10 +24,10 @@
 		
 		<style>
 				
-            
-                
-            
+      
         
+      
+    
 		</style>
 	</head>
 	
@@ -47,13 +47,13 @@
 					<a href='#!' onclick="_updateCurrentStage(-1)" class='dashboard-view'><i class='mdi-action-track-changes'></i></i>Analysis</a>
 				</li>
 			</ul>
-			<span class='report-name'>Automation Report</span> <span class='report-headline'></span>
+			<span class='report-name'></span> <span class='report-headline'>Automation Report</span>
 			<ul class='right hide-on-med-and-down nav-right'>
 				<li class='theme-selector' alt='Click to toggle dark theme. To enable by default, use js configuration $("body").addClass("dark");' title='Click to toggle dark theme. To enable by default, use js configuration $("body").addClass("dark");'>
 					<i class='mdi-hardware-desktop-windows'></i>
 				</li>
 				<li>
-					<span class='suite-started-time'>2017-11-20 15:31:04</span>
+					<span class='suite-started-time'>2018-02-02 17:30:25</span>
 				</li>
 				<li>
 					<span>v2.41.1</span>
@@ -83,25 +83,25 @@
 					<div class='col l2 m4 s12'>
 						<div class='card suite-total-time-current'> 
 							<span class='panel-name'>Total Time Taken (Current Run)</span> 
-							<span class='suite-total-time-current-value panel-lead'>0h 0m 33s+598ms</span> 
+							<span class='suite-total-time-current-value panel-lead'>0h 0m 53s+967ms</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s12'>
 						<div class='card suite-total-time-overall'> 
 							<span class='panel-name'>Total Time Taken (Overall)</span> 
-							<span class='suite-total-time-overall-value panel-lead'>0h 0m 33s+598ms</span> 
+							<span class='suite-total-time-overall-value panel-lead'>0h 0m 53s+967ms</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s6 suite-start-time'>
 						<div class='card accent green-accent'> 
 							<span class='panel-name'>Start</span> 
-							<span class='panel-lead suite-started-time'>2017-11-20 15:30:30</span> 
+							<span class='panel-lead suite-started-time'>2018-02-02 17:29:31</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s6 suite-end-time'>
 						<div class='card accent pink-accent'> 
 							<span class='panel-name'>End</span> 
-							<span class='panel-lead suite-ended-time'>2017-11-20 15:31:04</span> 
+							<span class='panel-lead suite-ended-time'>2018-02-02 17:30:25</span> 
 						</div> 
 					</div>
 				</div>
@@ -168,7 +168,7 @@
 								<tbody>
 										<tr>
 											<td>User Name</td>
-											<td>Anupam Chauhan</td>
+											<td>Amupam Chauhan</td>
 										</tr>
 										<tr>
 											<td>OS</td>
@@ -180,11 +180,11 @@
 										</tr>
 										<tr>
 											<td>Host Name</td>
-											<td>118-online.co.uk</td>
+											<td>118-Online</td>
 										</tr>
 										<tr>
 											<td>Environment</td>
-											<td>Automation Testing</td>
+											<td>QA-Sanity</td>
 										</tr>
 								</tbody>
 							</table>
@@ -210,6 +210,7 @@
 									<li class='pass'><a href='#!'>Pass</a></li>
 									<li class='fail'><a href='#!'>Fail</a></li>
 									<li class='skip'><a href='#!'>Skip</a></li>
+										<li class='unknown'><a href='#!'>Unknown</a></li>
 									<li class='divider'></li>
 									<li class='clear'><a href='#!'>Clear Filters</a></li>
 								</ul>
@@ -241,20 +242,23 @@
 						<div class='card-panel no-padding-h no-padding-v no-margin-v'>
 							<div class='wrapper'>
 								<ul id='test-collection' class='test-collection'>
-										<li class='collection-item test displayed active fail ' extentid='45225823-2e6a-45af-aede-f70178e6f292'>
+										<li class='collection-item test displayed active unknown ' extentid='0982d23d-4265-437f-a1d5-1a42009671a1'>
 											<div class='test-head'>
-												<span class='test-name'>failTest </span>
-												<span class='test-status label right outline capitalize fail'>fail</span>
+												<span class='test-name'>TestLogin1Test :: testLogin </span>
+												<span class='test-status label right outline capitalize unknown'>unknown</span>
 												<span class='category-assigned hide '></span>
 											</div>
 											<div class='test-body'>
 												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-11-20 15:30:30</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-11-20 15:30:30</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+16ms</span>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2018-02-02 17:29:31</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'></span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'></span>
 												</div>
-												<div class='test-desc'></div>
+												<div class='test-desc'>testLogin</div>
 												<div class='test-attributes'>
+														<div class='authors'>
+																<span class='author text-white'>Anupam Chauhan</span>
+														</div>
 												</div>
 												<div class='test-steps'>
 													<table class='bordered table-results'>
@@ -266,16 +270,6 @@
 															</tr>
 														</thead>
 														<tbody>
-																<tr>
-																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
-																	<td class='timestamp'>15:30:30</td>
-																	<td class='step-details'>Test Case Failed is failTest</td>
-																</tr>
-																<tr>
-																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
-																	<td class='timestamp'>15:30:30</td>
-																	<td class='step-details'>Test Case Failed is java.lang.AssertionError: expected [true] but found [false]</td>
-																</tr>
 														</tbody>
 													</table>
 													<ul class='collapsible node-list' data-collapsible='accordion'>
@@ -283,17 +277,17 @@
 												</div>
 											</div>
 										</li>
-										<li class='collection-item test displayed active pass ' extentid='17666ca4-8be4-4194-81ff-f0b21da4f5c3'>
+										<li class='collection-item test displayed active fail ' extentid='1f021fff-c169-424e-99b4-e45120e8dcf0'>
 											<div class='test-head'>
-												<span class='test-name'>passTest </span>
-												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='test-name'>testLogin </span>
+												<span class='test-status label right outline capitalize fail'>fail</span>
 												<span class='category-assigned hide '></span>
 											</div>
 											<div class='test-body'>
 												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-11-20 15:30:30</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-11-20 15:30:30</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+15ms</span>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2018-02-02 17:29:43</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'></span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'></span>
 												</div>
 												<div class='test-desc'></div>
 												<div class='test-attributes'>
@@ -310,8 +304,13 @@
 														<tbody>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>15:30:30</td>
-																	<td class='step-details'>Test Case Passed is passTest</td>
+																	<td class='timestamp'>17:29:50</td>
+																	<td class='step-details'>Test Case (testLogin) Status is passed</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>17:29:50</td>
+																	<td class='step-details'>Step details</td>
 																</tr>
 														</tbody>
 													</table>
@@ -320,17 +319,52 @@
 												</div>
 											</div>
 										</li>
-										<li class='collection-item test displayed active skip ' extentid='6d603c73-d089-4992-80aa-e3ac4c210375'>
+										<li class='collection-item test displayed active unknown ' extentid='cbf72987-5634-43ef-919c-364591cb6291'>
 											<div class='test-head'>
-												<span class='test-name'>skipTest </span>
-												<span class='test-status label right outline capitalize skip'>skip</span>
+												<span class='test-name'>UpdateProfile1Test :: updateprofile </span>
+												<span class='test-status label right outline capitalize unknown'>unknown</span>
 												<span class='category-assigned hide '></span>
 											</div>
 											<div class='test-body'>
 												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-11-20 15:30:30</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-11-20 15:30:30</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+0ms</span>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2018-02-02 17:29:51</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'></span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'></span>
+												</div>
+												<div class='test-desc'>updateprofile</div>
+												<div class='test-attributes'>
+														<div class='authors'>
+																<span class='author text-white'>Anupam Chauhan</span>
+														</div>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass ' extentid='e4769fb4-fadc-42ef-8d07-9a02bc3fce15'>
+											<div class='test-head'>
+												<span class='test-name'>updateprofile </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2018-02-02 17:30:13</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2018-02-02 17:30:25</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 12s+48ms</span>
 												</div>
 												<div class='test-desc'></div>
 												<div class='test-attributes'>
@@ -346,9 +380,9 @@
 														</thead>
 														<tbody>
 																<tr>
-																	<td class='status skip' title='skip' alt='skip'><i class='mdi-content-redo'></i></td>
-																	<td class='timestamp'>15:30:30</td>
-																	<td class='step-details'>Test Case Skipped is skipTest</td>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>17:30:24</td>
+																	<td class='step-details'>Test Case (updateprofile) Status is passed</td>
 																</tr>
 														</tbody>
 													</table>
@@ -454,12 +488,12 @@
 		<script>$(document).ready(function() { $('.logo span').html('ExtentReports'); });</script>
 		<script>
 				
-            
-                $(document).ready(function() {
-                    
-                });
-            
-        
+      
+        $(document).ready(function() {
+          
+        });
+      
+    
 		</script>
 	</body>
 </html>

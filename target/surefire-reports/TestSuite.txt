@@ -1,4 +1,20 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 29.828 sec
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 66.518 sec <<< FAILURE!
+test1(testScripts.login.Log4JTest)  Time elapsed: 0.215 sec  <<< FAILURE!
+java.lang.IllegalStateException: The driver executable does not exist: C:\Users\anupam.chauhan\workspace\118-online-master\src\BrowserDrivers\chromedriver.exe
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:534)
+	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:136)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:131)
+	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
+	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:329)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:124)
+	at testScripts.login.Log4JTest.test1(Log4JTest.java:25)
+
+test2(testScripts.login.Log4JTest)  Time elapsed: 0.004 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at testScripts.login.Log4JTest.test2(Log4JTest.java:40)
+

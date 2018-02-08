@@ -3,15 +3,24 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="extentReports.ExtentReportsClass">
+      <class name="testScripts.login.TestLogin1Test">
         <methods>
-          <include name="skipTest"/>
-          <include name="endReport"/>
-          <include name="getResult"/>
-          <include name="failTest"/>
           <include name="startReport"/>
+          <include name="endReport"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="testLogin"/>
         </methods>
-      </class> <!-- extentReports.ExtentReportsClass -->
+      </class> <!-- testScripts.login.TestLogin1Test -->
+      <class name="testScripts.login.UpdateProfile1Test">
+        <methods>
+          <include name="getResult"/>
+          <include name="startReport"/>
+          <include name="endReport"/>
+          <include name="updateprofile"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- testScripts.login.UpdateProfile1Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

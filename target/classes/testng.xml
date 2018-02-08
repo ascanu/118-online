@@ -1,13 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite">
+<suite name="Suite" parallel="tests">
 <listeners>
         <listener class-name="resources.ExtentReporterNG"/>
     </listeners>
-  <test name="Test">
+
+ <test name="FirefoxTest">
+
+ <parameter name="browser" value="firefox" />
+   
     <classes>
       <class name="testScripts.login.UpdateProfile1"/>
       <class name="testScripts.login.TestLogin1"/>
+      <class name="testScripts.login.Log4JTest"/>
+      
+      
+      
+      
+     
     </classes>
   </test> <!-- Test -->
+  <test name="IETest">
+
+ <parameter name="browser" value="ie" />
+
+
+
+ <classes>
+      <class name="testScripts.login.UpdateProfile1"/>
+      <class name="testScripts.login.TestLogin1"/>
+      <class name="testScripts.login.Log4JTest"/>   
+      
+      
+      
+     
+    </classes>
+
+
+
+ </test>
 </suite> <!-- Suite -->

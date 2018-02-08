@@ -3,20 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test name="Test(failed)">
     <classes>
-      <class name="testScripts.login.TestLogin1">
+      <class name="testScripts.login.Log4JTest">
         <methods>
-          <include name="testLogin"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
+          <include name="test1"/>
+          <include name="test2"/>
         </methods>
-      </class> <!-- testScripts.login.TestLogin1 -->
-      <class name="testScripts.login.UpdateProfile1">
-        <methods>
-          <include name="setUp"/>
-          <include name="testDown"/>
-          <include name="updateprofile"/>
-        </methods>
-      </class> <!-- testScripts.login.UpdateProfile1 -->
+      </class> <!-- testScripts.login.Log4JTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
