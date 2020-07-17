@@ -19,7 +19,7 @@ public class XMLPArse {
 	
 	public static void main(String[] args) throws SAXException, Exception {
 		File sourceFile=new File("./src/main/java/com/etsy/qa/testdata/source/source.xml");
-		File targetFile=new File("./src/main/java/com/etsy/qa/testdata/Destinatioin/dest.xml");
+		File targetFile=new File("./src/main/java/com/etsy/qa/testdata/Destinatioin/desti.xml");
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 		Document sourcedoc = dBuilder.parse(sourceFile);
@@ -27,8 +27,8 @@ public class XMLPArse {
 		
 		
 		System.out.println("SourceDoc : " + sourcedoc.getChildNodes());
-		List<String> sourceList= new ArrayList<String>();
-		List<String> targetList = new ArrayList<String>();
+		Map<String,String> sourceList= new HashMap<String,String>();
+		Map<String,String> targetList = new HashMap<String,String>();
 		printNode(sourcedoc.getChildNodes(), sourceList);
 		printNode(targetdoc.getChildNodes(),targetList);
 	
@@ -39,22 +39,39 @@ public class XMLPArse {
 		
 		
 		//System.out.println("targetlist : " + targetList);
-		listDifference(sourceList,targetList);
+		 listDifference(sourceList,targetList);
 		
 	}
-	private static void printNode(NodeList nodelist, List<String> textList) {
+	
+	
+	
+	
+	private static void printNode(NodeList nodelist, Map<String, String> targetList) {
 		String Keys=null;
 		Set<Integer> NodeTypesSet = new HashSet<Integer>();
 		for(int count=0;count<nodelist.getLength();count++) {
 			Node tempNode=nodelist.item(count);
 			NodeTypesSet.add(Integer.valueOf(tempNode.getNodeType()));
 			if (tempNode.getNodeType() == Node.ELEMENT_NODE) {
-				parseElementNode(tempNode,textList);
+				parseElementNode(tempNode,targetList);
 			} else if (tempNode.getNodeType() == Node.TEXT_NODE) {
+				//tempNode
 				String tempString = tempNode.getNodeValue().trim().replaceAll("\\s+"," ");
-					//System.out.println("index : " +  tempString + "lenght is :" + tempString.length());
+				//System.out.println("index : " +  tempString + "lenght is :" + tempString.length());
 				if(tempString.length() >0) {
-					textList.add(tempString);
+					
+					/*
+					 * System.out.println("###################################");
+					 * System.out.println("Base URI : " + tempNode.getParentNode().getNodeName());
+					 */
+					 System.out.println("Base URI : " + getBaseNode(tempNode));
+				//	 System.out.println("Base URI : " + getBaseNode2(tempNode));
+					 System.out.println("Text value : " + tempString);
+					/*
+					 * System.out.println("###################################");
+					 */	
+					
+					targetList.put(getBaseNode(tempNode), tempString);
 				}
 				
 				
@@ -68,65 +85,37 @@ public class XMLPArse {
 		//System.out.println("TextList :" + textList);
 		//return textList;	
 	}
+
+	private static String getBaseNode(Node tempNode) {
+		Node parentNode = tempNode.getParentNode();
+		if(parentNode != null && parentNode.getParentNode() != null) {
+			return parentNode.getNodeName() + "->" + getBaseNode(parentNode.getParentNode());
+		}
+		else {
+			//System.out.println("tempValue : " + tempNode.getNodeName());
+			return tempNode.getNodeName();
+		}
+	}
+	
 	
 	
 	
 
-	private static void parseTextNode(Node tempNode) {
-		//System.out.println(tempNode.getNodeValue());
-		
-		
-		
-	}
-	private static void parseElementNode(Node elementNode, List<String> textList) {
+	
+	private static void parseElementNode(Node elementNode, Map<String, String> targetList) {
 		
 		if(elementNode.getChildNodes().getLength() > 0) {
 			NodeList childNodes = elementNode.getChildNodes();
-			printNode(childNodes,textList);
+			printNode(childNodes,targetList);
 		}
 		
 	}
-	public static void listDifference(List<String> sourceList, List<String> targetList) {
-		/*
-		 * System.out.print(source); // System.out.println(target);
-		 * 
-		 * String SourceData=source.replace(".", " . "); String
-		 * targetData=source.replace(".", " . ");
-		 * 
-		 * List<String> sourceList=new
-		 * ArrayList<String>(Arrays.asList(SourceData.split("\\s"))); List<String>
-		 * targetList=new ArrayList<String>(Arrays.asList(targetData.split("\\s")));
-			soureceList = [a,b,c,d,e]
-			targetList = [c,d,e,f,g]
-			added =[f,g]
-			deleted = [a,b]
-		 */		
+	public static void listDifference(Map<String, String> sourceList, Map<String, String> targetList) {
 		
-		/*
-		 * List<String> list1 = Arrays.asList("a","b","c","d","e"); List<String> list2 =
-		 * Arrays.asList("c","d","e","f","g");
-		 * 
-		 * System.out.println(CollectionUtils.removeAll(list2,list1));
-		 * System.out.println(CollectionUtils.removeAll(list1,list2));
-		 */
-		List<String>tempSourceList = new ArrayList<>();
-		List<String>tempTargetList = new ArrayList<>();
 		
-		IntStream.range(0, 30).forEach(index -> {
-		//	tempSourceList.add(sourceList.get(index));
-		//	System.out.println("Index is :" + index + " and value is:" +sourceList.get(index));
-		}); 
-
-		IntStream.range(0, 30).forEach(index -> {
-		//	tempTargetList.add(targetList.get(index));
-		//	System.out.println("Index is :" + index + " and value is:" +targetList.get(index));
-		}); 
-		
-	//	System.out.println(sourceList);
-	System.out.println(targetList);
-	//	System.out.print("Added"+CollectionUtils.removeAll(targetList,sourceList)); 
-	//	System.out.print("<----------------------------------------.>"); 
-	//	System.out.print("deleted"+CollectionUtils.removeAll(sourceList,targetList));
+        System.out.print("Added"+CollectionUtils.removeAll(targetList,sourceList)); 
+		System.out.print("<----------------------------------------.>"); 
+		System.out.print("deleted"+CollectionUtils.removeAll(sourceList,targetList));
 		  
 		
 		
