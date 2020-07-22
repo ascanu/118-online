@@ -1,0 +1,32 @@
+private static void printTitles (NodeList nodelist) {
+   for (int count = 0; count < nodelist.getLength(); count++) {
+      Node tempNode = nodelist.item(count);
+      if (tempNode.getNodeType() == Node.ELEMENT_NODE) {
+         String nodeName = tempNode.getNodeName();
+         //System.out.println("Node Name = " + nodeName );
+          if (tempNode.hasAttributes()) {
+            //System.out.println("Att Node Name = " + tempNode
+             // .getNodeName());
+             NamedNodeMap attributes = tempNode.getAttributes();
+             for (int att = 0; att < attributes.getLength(); att++) {
+                Node attNode = attributes.item(att);
+                if(attNode.getNodeName().equalsIgnoreCase("name") && attNode.getNodeValue().equalsIgnoreCase(
+                     "longTitle")){
+               String longTitle = "";
+               longTitle = processTitleNode(tempNode);
+                   System.out.println("longTitle :" + longTitle);
+                }else if(attNode.getNodeName().equalsIgnoreCase(
+                     "name") && attNode.getNodeValue().equalsIgnoreCase(
+                     "shortTitle")){
+                  String shortTitle = processTitleNode(tempNode);
+                   System.out.println("shortTitle : " + shortTitle);
+                }
+             }
+          }
+         if(tempNode.hasChildNodes()){
+            printTitles(tempNode.getChildNodes());
+         }
+      }
+   }
+
+}
